@@ -50,6 +50,6 @@ bot.onText(/\/list/, (msg) => {
   bot.sendMessage(chatId, "Sent meows");
 });
 
-bot.onText(/\/catfact/, (msg) => {
-  getFact();
+bot.onText(/\/remind/, (msg) => {
+  bot.sendMessage(chatId, "I only listen to polulu");
 });
