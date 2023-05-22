@@ -4,5 +4,9 @@
   "main": "index.js",
   "repository": "https://github.com/lewishoty/meowminton.git",
   "author": "lewishoty <lewis.ho@shopee.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "twilio": "^4.11.1"
+  }
 }
