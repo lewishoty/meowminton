@@ -1,0 +1,8 @@
+{
+  "name": "meowminton",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/lewishoty/meowminton.git",
+  "author": "lewishoty <lewis.ho@shopee.com>",
+  "license": "MIT"
+}
