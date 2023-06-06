@@ -21,22 +21,6 @@ const getPost = (text) => {
     });
 };
 
-const getFact = async () => {
-  const fact = await axios.get("https://catfact.ninja/fact");
-  const send = () =>
-    axios
-      .get(
-        "https://api.telegram.org/bot6219383439:AAHpWp7eOb0c1KaoDyyuS7JGVq_rwv10B-c/sendMessage?chat_id=-1001765394563&text=" +
-          fact.data.fact
-      )
-      .then((res) => console.log(res))
-      .catch((err) => {
-        console.log("Error: ", err.message);
-      });
-
-  await send();
-};
-
 bot.onText(/\/list/, (msg) => {
   const chatId = msg.chat.id;
   const catOwner = 253374216;
