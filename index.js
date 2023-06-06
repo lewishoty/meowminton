@@ -1,13 +1,6 @@
-require("dotenv").config();
-const axios = require("axios");
 const TelegramBot = require("node-telegram-bot-api");
-
-const token = process.env.TOKEN;
-
-// Created instance of TelegramBot
-const bot = new TelegramBot(token, {
-  polling: true,
-});
+const token = "6219383439:AAHpWp7eOb0c1KaoDyyuS7JGVq_rwv10B-c";
+const bot = new TelegramBot(token, { polling: true });
 
 const getPost = (text) => {
   axios
@@ -21,19 +14,6 @@ const getPost = (text) => {
     });
 };
 
-bot.onText(/\/list/, (msg) => {
-  const chatId = msg.chat.id;
-  const catOwner = 253374216;
-
-  if (msg.from.id !== catOwner) {
-    bot.sendMessage(chatId, "I only listen to polulu");
-    return;
-  }
-
-  getPost(encodeURIComponent(msg.text.slice(5)));
-  bot.sendMessage(chatId, "Sent meows");
-});
-
-bot.onText(/\/remind/, (msg) => {
-  bot.sendMessage(chatId, "I only listen to polulu");
+bot.on("message", (msg) => {
+  bot.sendMessage(msg.chat.id, "Ill have the tuna. No crust.");
 });
